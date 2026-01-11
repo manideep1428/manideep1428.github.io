@@ -3,193 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manideep | Software Engineer</title>
-    <!-- Importing Inter font for premium feel -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Venkata Sai Manideep Cherukuri - Resume</title>
     <style>
-        :root {
-            --primary: #2563eb;
-            --text-main: #1f2937;
-            --text-secondary: #6b7280;
-            --bg-page: #f9fafb;
-            --bg-card: #ffffff;
-            --border: #e5e7eb;
-        }
-
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 2rem;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            padding: 40px 80px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            font-size: 11px;
+            color: #000;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info a {
+            color: #1155cc;
+            text-decoration: none;
+        }
+        
+        h2 {
+            font-size: 11.5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #000;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .job-section, .project-section {
+            margin-bottom: 12px;
+        }
+        
+        .job-header {
+            margin-bottom: 2px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 11.5px;
+        }
+        
+        .company-location {
+            font-size: 11.5px;
+            margin-bottom: 1px;
+        }
+        
+        .role-date {
+            font-size: 11.5px;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .date-right {
+            float: right;
+            font-style: italic;
+        }
+        
+        .project-title-line {
+            font-size: 11.5px;
+            margin-bottom: 1px;
+        }
+        
+        .project-title-line strong {
+            font-weight: bold;
+        }
+        
+        .project-title-line a {
+            color: #1155cc;
+            text-decoration: underline;
+        }
+        
+        .project-role {
+            font-size: 11.5px;
+            font-style: italic;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-top: 3px;
+            margin-bottom: 8px;
+        }
+        
+        li {
+            font-size: 11.5px;
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+        
+        .skills-section {
+            font-size: 11.5px;
             line-height: 1.5;
         }
-
-        .container {
-            max-width: 600px;
-            width: 100%;
-            background: var(--bg-card);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--border);
-            text-align: center;
+        
+        .skills-section strong {
+            font-weight: bold;
         }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #e0e7ff 0%, #cbd5e1 100%);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #111827;
-        }
-
-        .title {
-            color: var(--primary);
-            font-weight: 500;
-            font-size: 1.125rem;
-            margin-bottom: 1rem;
-        }
-
-        .bio {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .section-title {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            font-weight: 600;
-            text-align: left;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .pill {
-            background-color: #eff6ff;
-            color: var(--primary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .link-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-            transition: all 0.2s ease;
-            background: white;
-            gap: 10px;
-        }
-
-        .link-button:hover {
-            border-color: var(--text-secondary);
-            background-color: #f3f4f6;
-            transform: translateY(-1px);
-        }
-
-        .link-button.primary {
-            background-color: #1f2937;
-            color: white;
-            border-color: #1f2937;
-        }
-
-        .link-button.primary:hover {
-            background-color: #111827;
-        }
-
-        footer {
-            margin-top: 3rem;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
+        
+        @media print {
+            body {
+                padding: 20px 40px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-img">M</div>
-        
-        <h1>Manideep</h1>
-        <div class="title">Full Stack Developer</div>
-        
-        <p class="bio">
-            Passionate about building scalable web applications and crafting intuitive user experiences. 
-            Loves open source and exploring new technologies.
-        </p>
-
-        <div class="tech-stack">
-            <span class="pill">JavaScript</span>
-            <span class="pill">TypeScript</span>
-            <span class="pill">React</span>
-            <span class="pill">Node.js</span>
-            <span class="pill">Go</span>
+    <header>
+        <h1>Venkata Sai Manideep Cherukuri</h1>
+        <div class="contact-info">
+            <a href="mailto:saimanideep.ch12345@gmail.com">saimanideep.ch12345@gmail.com</a> | +918096368241 | GitHub: <a href="https://github.com/manideep1428">manideep1428</a>
         </div>
+    </header>
 
-        <div class="links">
-            <a href="https://github.com/Manideep" class="link-button primary" target="_blank">
-                <svg height="20" width="20" viewBox="0 0 24 24" fill="white">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                GitHub Profile
-            </a>
-            <a href="#" class="link-button">
-                Portfolio Website
-            </a>
-            <a href="mailto:hello@example.com" class="link-button">
-                Contact Me
-            </a>
+    <h2>Experience</h2>
+    <div class="job-section">
+        <div class="job-header">
+            <strong>Emergx – Internship</strong>
         </div>
+        <div class="company-location">Remote, India</div>
+        <div class="role-date">
+            Software Development Engineering
+            <span class="date-right">May 2025 – present</span>
+        </div>
+        <ul>
+            <li>Orchestrated the comprehensive development of a scalable AI-driven web platform, incorporating responsive front-end interfaces with resilient backend services.</li>
+            <li>Conceived and deployed system architectures that optimized performance, scalability, and security for enterprise-grade supply chain tools.</li>
+            <li>Achieved widespread adoption, with approximately 5000 users leveraging the platform at scale.</li>
+        </ul>
     </div>
 
-    <footer>
-        © 2024 Manideep. Built with minimalist principles.
-    </footer>
+    <h2>AI Safety Research Projects</h2>
+    
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>Prompt Injection Defense Mechanisms</strong>
+        </div>
+        <div class="project-role">
+            Proposed Fellowship Project
+            <span class="date-right">4-Month Research</span>
+        </div>
+        <ul>
+            <li>Conducted systematic analysis of prompt injection vulnerabilities across multiple open-source language models using a curated dataset of real-world attack vectors.</li>
+            <li>Developed taxonomy categorizing attack patterns and success rates across different model architectures.</li>
+            <li>Designed and empirically tested novel defense strategies to mitigate injection attacks.</li>
+            <li>Published findings on practical security measures for production AI systems.</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>Hidden Feature Discovery in Language Models</strong>
+        </div>
+        <div class="project-role">
+            Proposed Fellowship Project
+            <span class="date-right">4-Month Research</span>
+        </div>
+        <ul>
+            <li>Applied mechanistic interpretability techniques to reverse-engineer internal circuits in open-source LLMs, discovering previously undocumented behavioral features.</li>
+            <li>Utilized activation patching and causal tracing to isolate specific attention heads and MLP layers responsible for emergent capabilities.</li>
+            <li>Developed visualization toolkit for mapping feature interactions across transformer layers.</li>
+            <li>Documented findings to enable more targeted safety interventions in production models.</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>Deceptive Alignment Detection</strong>
+        </div>
+        <div class="project-role">
+            Proposed Fellowship Project
+            <span class="date-right">4-Month Research</span>
+        </div>
+        <ul>
+            <li>Designed evaluation framework to distinguish genuinely aligned AI behavior from strategically deceptive compliance across multiple frontier language models.</li>
+            <li>Created test scenarios where deceptive models would exhibit detectably different behavioral patterns than honest models.</li>
+            <li>Benchmarked existing detection methods and identified critical gaps in current safety evaluations.</li>
+            <li>Proposed novel detection techniques combining behavioral testing with interpretability analysis.</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>Scalable Oversight for Code Generation</strong>
+        </div>
+        <div class="project-role">
+            Proposed Fellowship Project
+            <span class="date-right">4-Month Research</span>
+        </div>
+        <ul>
+            <li>Investigated whether LLMs can reliably critique their own code outputs as a scalable oversight mechanism for autonomous programming systems.</li>
+            <li>Tested AI self-review capabilities across coding tasks of varying complexity, comparing against human expert evaluations.</li>
+            <li>Identified systematic limitations in model-based review, particularly for security vulnerabilities.</li>
+            <li>Results inform practical deployment strategies for AI-assisted software development.</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>AI Agent Safety Boundaries</strong>
+        </div>
+        <div class="project-role">
+            Proposed Fellowship Project
+            <span class="date-right">4-Month Research</span>
+        </div>
+        <ul>
+            <li>Built and tested autonomous AI agents using LLM APIs to empirically study constraint violation behaviors in goal-directed systems.</li>
+            <li>Deployed agents across diverse scenarios with explicit ethical boundaries to observe failure modes.</li>
+            <li>Documented distinct patterns where agents circumvented safety constraints despite explicit instructions.</li>
+            <li>Evaluated multiple intervention techniques and identified architectural modifications that reduce boundary violations.</li>
+        </ul>
+    </div>
+
+    <h2>Projects</h2>
+    
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>Niana( Lovable for designers )</strong> <a href="#">LINK</a>
+        </div>
+        <div class="project-role">
+            Developer
+            <span class="date-right">Jan 2026– present</span>
+        </div>
+        <ul>
+            <li>AI-powered mobile UI/UX design studio that converts plain-text app ideas into high-fidelity mobile screens in seconds</li>
+            <li>Exports generated designs as fully editable Figma files, enabling seamless handoff and iteration.</li>
+            <li>Included with Subscriptions with Razorpay. It's fully developed MVP</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>Cheat-coder ( Clulely )</strong> <a href="#">LINK</a>
+        </div>
+        <div class="project-role">
+            Developer
+            <span class="date-right">Dec 2024 – present</span>
+        </div>
+        <ul>
+            <li>Developed an undetectable AI assistant, "Cluely," clone for interview preparation.</li>
+            <li>Enabled users to leverage their API keys for successful interview outcomes.</li>
+            <li>Conducted extensive testing across various systems with hundreds of participants, confirming its undetectability by videoscreening platforms.</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title-line">
+            <strong>Astron.ai (Chrome Extension)</strong> <a href="#">LINK</a>
+        </div>
+        <div class="project-role">
+            Developer
+            <span class="date-right">Nov 2024 – Dec 2024</span>
+        </div>
+        <ul>
+            <li>Created a Chrome extension that use the Gemini Nano built in with the chrome browser</li>
+            <li>This is using the Gemini Nano, a compact, powerful model designed to summarize and rewrite text efficiently, saving time and boosting productivity.</li>
+            <li>Created in ReactJS, Vite, TailwindCss, Gemini Nano, Chrome and deployed over Chrome</li>
+        </ul>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skills-section">
+        <strong>Programming:</strong> Python, JavaScript, TypeScript, HTML/CSS, SQL, NoSql, Node.js, React.js, MATLAB, PyTorch, Hugging Face, Kaggle, TailwindCss, NextJs
+        <br><br>
+        <strong>Tools:</strong> AWS, Jupyter Notebooks, Git, Gitlab, GCP, Azure, Docker, Kubernetes
+    </div>
 </body>
 </html>

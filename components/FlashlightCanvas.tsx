@@ -37,47 +37,50 @@ export default function FlashlightCanvas({ active }: FlashlightCanvasProps) {
   }, [])
 
   const draw = useCallback(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    const tick = () => {
+      const canvas = canvasRef.current
+      if (!canvas) return
+      const ctx = canvas.getContext("2d")
+      if (!ctx) return
 
-    smoothRef.current.x += (mouseRef.current.x - smoothRef.current.x) * 0.15
-    smoothRef.current.y += (mouseRef.current.y - smoothRef.current.y) * 0.15
+      smoothRef.current.x += (mouseRef.current.x - smoothRef.current.x) * 0.15
+      smoothRef.current.y += (mouseRef.current.y - smoothRef.current.y) * 0.15
 
-    const sx = smoothRef.current.x
-    const sy = smoothRef.current.y
+      const sx = smoothRef.current.x
+      const sy = smoothRef.current.y
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    // Black overlay
-    ctx.fillStyle = "#000"
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
+      // Black overlay
+      ctx.fillStyle = "#000"
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    // Cut-out circle
-    const grad = ctx.createRadialGradient(sx, sy, 0, sx, sy, RADIUS)
-    grad.addColorStop(0, "rgba(0,0,0,1)")
-    grad.addColorStop(0.5, "rgba(0,0,0,0.92)")
-    grad.addColorStop(0.85, "rgba(0,0,0,0.4)")
-    grad.addColorStop(1, "rgba(0,0,0,0)")
+      // Cut-out circle
+      const grad = ctx.createRadialGradient(sx, sy, 0, sx, sy, RADIUS)
+      grad.addColorStop(0, "rgba(0,0,0,1)")
+      grad.addColorStop(0.5, "rgba(0,0,0,0.92)")
+      grad.addColorStop(0.85, "rgba(0,0,0,0.4)")
+      grad.addColorStop(1, "rgba(0,0,0,0)")
 
-    ctx.globalCompositeOperation = "destination-out"
-    ctx.fillStyle = grad
-    ctx.beginPath()
-    ctx.arc(sx, sy, RADIUS, 0, Math.PI * 2)
-    ctx.fill()
+      ctx.globalCompositeOperation = "destination-out"
+      ctx.fillStyle = grad
+      ctx.beginPath()
+      ctx.arc(sx, sy, RADIUS, 0, Math.PI * 2)
+      ctx.fill()
 
-    // Warm glow
-    ctx.globalCompositeOperation = "source-over"
-    const warmGrad = ctx.createRadialGradient(sx, sy, 0, sx, sy, RADIUS * 0.6)
-    warmGrad.addColorStop(0, "rgba(255, 220, 130, 0.07)")
-    warmGrad.addColorStop(1, "transparent")
-    ctx.fillStyle = warmGrad
-    ctx.beginPath()
-    ctx.arc(sx, sy, RADIUS * 0.6, 0, Math.PI * 2)
-    ctx.fill()
+      // Warm glow
+      ctx.globalCompositeOperation = "source-over"
+      const warmGrad = ctx.createRadialGradient(sx, sy, 0, sx, sy, RADIUS * 0.6)
+      warmGrad.addColorStop(0, "rgba(255, 220, 130, 0.07)")
+      warmGrad.addColorStop(1, "transparent")
+      ctx.fillStyle = warmGrad
+      ctx.beginPath()
+      ctx.arc(sx, sy, RADIUS * 0.6, 0, Math.PI * 2)
+      ctx.fill()
 
-    rafRef.current = requestAnimationFrame(draw)
+      rafRef.current = requestAnimationFrame(tick)
+    }
+    tick()
   }, [])
 
   useEffect(() => {

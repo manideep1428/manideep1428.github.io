@@ -51,6 +51,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="mt-1 text-sm leading-snug text-gray-900">
         {project.description}
       </div>
+      {project.warning && (
+        <div className="mt-1.5 text-xs text-gray-500 italic sm:text-sm">
+          ⚠️ {project.warning}
+        </div>
+      )}
     </div>
   )
 }

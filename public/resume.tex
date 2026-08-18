@@ -1,0 +1,311 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tabularx}
+\usepackage{mathpazo}       % Palatino — a timeless serif typeface
+\usepackage[stretch=10,shrink=10]{microtype}  % Refined character spacing
+
+% --- Colour palette (traditional dark navy) ---
+\definecolor{accentnavy}{RGB}{10, 40, 80}
+\definecolor{textdark}{RGB}{30, 30, 30}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accentnavy,
+    linkcolor=accentnavy
+}
+
+% --- Section headers: bold small-caps with rule ---
+\titleformat{\section}
+{\large\bfseries\scshape\color{accentnavy}}
+{}
+{0em}
+{}
+[\titlerule]
+
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\setlist[itemize]{
+leftmargin=1.3em,
+itemsep=1pt,
+topsep=2pt
+}
+
+\begin{document}
+
+%================================================
+% HEADER
+%================================================
+
+\begin{center}
+
+{\LARGE\bfseries\scshape Venkata Sai Manideep Cherukuri}
+
+\vspace{4pt}
+
+
+\vspace{6pt}
+
+{\small
+\href{mailto:saimanideep.ch12345@gmail.com}{saimanideep.ch12345@gmail.com}
+\quad\textbar\quad
++91\,80963\,68241
+\quad\textbar\quad
+\href{https://github.com/manideep1428}{github.com/manideep1428}
+}
+
+\end{center}
+
+%================================================
+% EXPERIENCE
+%================================================
+
+\section{Experience}
+
+\textbf{Emergx}
+\hfill
+\textit{May 2025 -- Sept 2025}
+
+Software Development Engineer Intern \hfill Remote
+
+{\small \href{https://www.emergx.ai}{emergx.ai}}
+
+\begin{itemize}
+    \item Built and shipped a full-stack AI platform supporting supply-chain workflows and automation.
+    \item Developed frontend and backend systems used in production environments.
+    \item Improved application scalability and reliability as the platform grew to over 5,000 users.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Freelance Technical Writer}
+\hfill
+\textit{2024 -- 2025}
+
+Mintlify Documentation
+
+\begin{itemize}
+    \item Authored developer documentation for Brew, Emby, and Debounce.
+    \item Wrote API references, onboarding guides, authentication flows, and integration tutorials.
+    \item Improved developer onboarding and product adoption through structured documentation.
+\end{itemize}
+
+%================================================
+% EDUCATION
+%================================================
+
+\section{Education}
+
+\textbf{Loyola College}
+\hfill
+\textit{2024 -- 2026}
+
+Bachelor of Computer Science (Dropout) \hfill Guntur, India
+
+%================================================
+% PROJECTS
+%================================================
+
+\section{Projects}
+
+\textbf{Kiver}
+\hfill
+\textit{Feb 2026 -- Present}
+
+Desktop Mission Control for AI Coding Agents
+
+{\small
+\href{https://github.com/manideep1428/Kiver}{GitHub}
+}
+
+\begin{itemize}
+    \item Built a unified control plane and visual workspace for local AI coding agents (Claude Code and Codex CLI).
+    \item Coordinated parallel autonomous subagents with deterministic SQLite file locking to prevent concurrent file conflicts.
+    \item Implemented live terminal multiplexing with xterm.js/node-pty, zero-loss mid-task provider migration, and per-agent git rollbacks.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{Supergent}
+\hfill
+\textit{Mar 2026 -- Present}
+
+AI Full-Stack App Builder
+
+{\small
+\href{https://supergent-web.vercel.app/}{Live Demo}
+\quad\textbar\quad
+\href{https://github.com/manideep1428/supergent}{GitHub}
+}
+
+\begin{itemize}
+    \item Built an AI software engineer capable of generating complete web and mobile applications from a single prompt.
+    \item Generates frontend, backend APIs, authentication, databases, and deployment configurations automatically.
+    \item Implemented multi-agent planning, coding, debugging, and refinement workflows.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{LovDacn UI}
+\hfill
+\textit{2026 -- Present}
+
+Open Source UI Component Library (Beta)
+
+{\small
+\href{https://github.com/lovdacn-ui/ui}{github.com/lovdacn-ui/ui}
+}
+
+\begin{itemize}
+    \item Creator and maintainer of an open-source React and Next.js UI component library.
+    \item Building reusable UI components, templates, and developer tools using TypeScript and TailwindCSS.
+    \item Currently in beta and actively expanding the component collection and documentation.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{Instagram MCP}
+\hfill
+\textit{2026 -- Present}
+
+MCP Server for Instagram Automation
+
+{\small
+\href{https://github.com/manideep1428/instagram_MCP}{GitHub}
+}
+
+\begin{itemize}
+    \item Built a Model Context Protocol (MCP) server that lets AI agents automate Instagram through natural language commands.
+    \item Integrated the Instagram Graph API with MCP-compatible clients such as Claude Desktop, Cursor, and Windsurf.
+    \item Implemented tools for media publishing, profile and comment management, direct messaging, and account automation through a unified interface.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{Niana}
+\hfill
+\textit{Jan 2026 -- Present}
+
+AI Design Generation Platform
+
+{\small
+\href{https://niana.design}{niana.design}
+}
+
+\begin{itemize}
+    \item Built a platform that generates mobile UI designs from natural language prompts.
+    \item Added direct export workflows for Figma integration.
+    \item Launched subscription billing and onboarded paying users.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{Astron}
+\hfill
+\textit{Feb 2026 -- Present}
+
+AI Browser Automation CLI
+
+{\small
+\href{https://github.com/manideep1428/astron-browser}{GitHub}
+}
+
+\begin{itemize}
+    \item Built a terminal-native browser automation platform powered by AI agents and natural language commands.
+    \item Integrated OpenAI, Claude, Gemini, and Browser Use with seamless model switching.
+    \item Added persistent daemon mode, browser session management, and secure credential storage.
+\end{itemize}
+
+\vspace{5pt}
+
+
+\textbf{Auto AI Video Generator}
+\hfill
+\textit{Dec 2024 -- Jan 2025}
+
+{\small
+\href{https://github.com/manideep1428/auto_ai_video_generator}{GitHub}
+}
+
+\begin{itemize}
+    \item Built an automated AI pipeline that creates videos from a single topic.
+    \item Automated script writing, image generation, voice synthesis, editing, and publishing.
+    \item Generated over 140,000+ views during the first week after launch.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{Cheat-Coder}
+\hfill
+\textit{Dec 2024 -- Jul 2025}
+
+AI Interview Assistant
+
+{\small
+\href{https://github.com/manideep1428/cheat-coder}{GitHub}
+}
+
+\begin{itemize}
+    \item Built a local-first AI interview assistant powered by user-provided API keys.
+    \item Designed a privacy-focused architecture with zero server-side storage.
+    \item Tested across hundreds of users in real interview environments.
+\end{itemize}
+
+\section{Achievements}
+\vspace{6pt}
+
+\begin{itemize}
+    \item Participated and earned certification in \textbf{Mumbai Hack 2025 Hackathon}, demonstrating strong problem-solving and teamwork skills.
+\end{itemize}
+\vspace{6pt}
+%================================================
+% SKILLS
+%================================================
+
+\section{Skills}
+
+\renewcommand{\arraystretch}{1.25}
+
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+
+\textbf{Programming} &
+Python, TypeScript, JavaScript, SQL, HTML, CSS \\
+
+\textbf{Frontend} &
+React, Next.js, React Native, TailwindCSS \\
+
+\textbf{Backend} &
+Node.js, PostgreSQL, MongoDB, Prisma ORM, REST APIs \\
+
+\textbf{AI / LLMs} &
+OpenAI SDK, Anthropic Claude SDK, Google Gemini SDK, Vercel AI SDK, LangChain, LangGraph, Hugging Face Transformers, PyTorch \\
+
+\textbf{Cloud \& DevOps} &
+AWS, GCP, Azure, Docker, Kubernetes, Supabase, Convex, Vercel \\
+
+\textbf{Tools} &
+Git, GitHub, Linux, Postman, Razorpay \\
+
+\end{tabularx}
+
+%================================================
+% PUBLICATIONS
+%================================================
+
+\section{Publications}
+
+\begin{itemize}
+    \item \href{https://medium.com/@saimanideep.ch12345/why-floats-are-preferred-over-integers-in-machine-learning-73da30ca2225}{Why Floats are Preferred Over Integers in Machine Learning}
+
+    \item \href{https://medium.com/@saimanideep.ch12345/genesis-training-robots-430-000x-faster-than-real-time-c6b6775eee63}{Genesis: Training Robots 430,000x Faster Than Real-Time}
+\end{itemize}
+
+\end{document}

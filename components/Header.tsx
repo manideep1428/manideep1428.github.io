@@ -27,6 +27,14 @@ const ChevronDownIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
+const DownloadIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+)
+
 const DiagonalArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <line x1="7" y1="17" x2="17" y2="7" />
@@ -137,31 +145,20 @@ export default function Header({
         </div>
 
         {/* Nav links */}
-        <div className="sm:absolute sm:right-10 sm:top-1/2 sm:-translate-y-1/2 flex gap-5 text-sm text-gray-500">
-          {/* <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault()
-              window.scrollTo({ top: 0, behavior: "smooth" })
-            }}
-            className={`font-medium no-underline transition-colors ${lightMode
-              ? "text-white hover:text-blue-300"
-              : "text-gray-900 hover:text-[#0A66C2]"
-              }`}
-          >
-            Home
-          </a> */}
-          {/* <a
-            href={PROFILE.githubUrl}
+        <div className="sm:absolute sm:right-10 sm:top-1/2 sm:-translate-y-1/2 flex items-center gap-5 text-sm text-gray-500">
+          <a
+            href="/resume-1.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-medium no-underline transition-colors ${lightMode
+            download="Venkata_Sai_Manideep_Resume.pdf"
+            className={`font-medium no-underline transition-colors flex items-center gap-1.5 ${lightMode
               ? "text-white hover:text-blue-300"
               : "text-gray-900 hover:text-[#0A66C2]"
               }`}
           >
-            GitHub
-          </a> */}
+            Resume
+            <DownloadIcon className="w-3.5 h-3.5" />
+          </a>
 
           {/* Chat with Hover Dropdown */}
           <div
